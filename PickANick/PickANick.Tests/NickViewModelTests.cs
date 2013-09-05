@@ -28,5 +28,15 @@ namespace PickANick.Tests
             Assert.IsNotNull(_nickViewModel.Nicks);
             Assert.AreNotEqual(0, _nickViewModel.Nicks.Length);
         }
+
+        [TestMethod, ExpectedException(typeof(AggregateException))]
+        public void GetLocationNoNick()
+        {
+            _nickViewModel.PickedNick = null;
+
+            var task = _nickViewModel.GetLocation();
+
+            task.Wait();
+        }
     }
 }
