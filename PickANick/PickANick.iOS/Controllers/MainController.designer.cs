@@ -12,9 +12,15 @@ namespace PickANick.iOS
 	[Register ("MainController")]
 	partial class MainController
 	{
+		[Outlet]
+		MonoTouch.UIKit.UITableView NickTable { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (NickTable != null) {
+				NickTable.Dispose ();
+				NickTable = null;
+			}
 		}
 	}
 }
