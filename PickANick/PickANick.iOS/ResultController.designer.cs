@@ -9,17 +9,17 @@ using System.CodeDom.Compiler;
 
 namespace PickANick.iOS
 {
-	[Register ("MainController")]
-	partial class MainController
+	[Register ("ResultController")]
+	partial class ResultController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITableView _nickTable { get; set; }
+		MonoTouch.UIKit.UILabel _resultText { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (_nickTable != null) {
-				_nickTable.Dispose ();
-				_nickTable = null;
+			if (_resultText != null) {
+				_resultText.Dispose ();
+				_resultText = null;
 			}
 		}
 	}

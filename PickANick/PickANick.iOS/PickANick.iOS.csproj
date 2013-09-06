@@ -119,9 +119,22 @@
     <Compile Include="..\PickANick.Core\ServiceContainer.cs">
       <Link>Core\ServiceContainer.cs</Link>
     </Compile>
+    <Compile Include="LocationController.cs" />
+    <Compile Include="LocationController.designer.cs">
+      <DependentUpon>LocationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultController.cs" />
+    <Compile Include="ResultController.designer.cs">
+      <DependentUpon>ResultController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\flirtatiousnic.png" />
+    <BundleResource Include="Resources\germany.png" />
+  </ItemGroup>
 </Project>
