@@ -119,6 +119,14 @@
     <Compile Include="..\PickANick.Core\ServiceContainer.cs">
       <Link>Core\ServiceContainer.cs</Link>
     </Compile>
+    <Compile Include="LocationController.cs" />
+    <Compile Include="LocationController.designer.cs">
+      <DependentUpon>LocationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultController.cs" />
+    <Compile Include="ResultController.designer.cs">
+      <DependentUpon>ResultController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />

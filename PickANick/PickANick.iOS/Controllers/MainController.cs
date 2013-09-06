@@ -21,17 +21,25 @@ namespace PickANick.iOS
 
         public async override void ViewDidLoad()
         {
-            base.ViewDidLoad();
+			base.ViewDidLoad();
+			_nickTable.Source = new TableSource (this);
 
             await _nickViewModel.GetNicks();
 
             //TODO: reload table here
-            //_table.ReloadData
+			_nickTable.ReloadData ();
         }
 
         private class TableSource : UITableViewSource
         {
             private readonly NickViewModel _nickViewModel = ServiceContainer.Resolve<NickViewModel>();
+			
+			private UIViewController _controller;
+
+			public TableSource (UIViewController controller)
+			{
+				_controller = controller;
+			}
 
             public override int RowsInSection(UITableView tableview, int section)
             {
@@ -41,8 +49,10 @@ namespace PickANick.iOS
             public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
             {
                 var nick = _nickViewModel.Nicks [indexPath.Row];
-                //TODO: code me
-                return null;
+                
+				var cell = tableView.DequeueReusableCell ("nickcell");
+				cell.TextLabel.Text = nick.ImageName;
+				return cell;
             }
 
             public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
@@ -50,6 +60,7 @@ namespace PickANick.iOS
                 var nick = _nickViewModel.Nicks [indexPath.Row];
                 _nickViewModel.PickedNick = nick;
 
+				_controller.PerformSegue ("LocationController", this);
                 //TODO: show the next screen
             }
         }

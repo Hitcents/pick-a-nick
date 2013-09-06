@@ -10,11 +10,11 @@ namespace PickANick.Core
     {
         private Nick[] _nicks = new[]
         {
-            new Nick { Id = 1, ImageName = "Nick1" },
-            new Nick { Id = 2, ImageName = "Nick2" },
-            new Nick { Id = 3, ImageName = "Nick3" },
-            new Nick { Id = 4, ImageName = "Nick4" },
-            new Nick { Id = 5, ImageName = "Nick5" },
+            new Nick { Id = 1, ImageName = "Cool Nic" },
+            new Nick { Id = 2, ImageName = "Angry Nic" },
+            new Nick { Id = 3, ImageName = "Surprised Nic" },
+            new Nick { Id = 4, ImageName = "Sad Nic" },
+            new Nick { Id = 5, ImageName = "Flirtatious Nic" },
         };
         private Location[] _locations = new[]
         {
