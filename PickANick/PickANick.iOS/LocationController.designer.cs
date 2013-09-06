@@ -12,9 +12,23 @@ namespace PickANick.iOS
 	[Register ("LocationController")]
 	partial class LocationController
 	{
+		[Outlet]
+		MonoTouch.UIKit.UITextField _locationTextBox { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton _submitButton { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (_locationTextBox != null) {
+				_locationTextBox.Dispose ();
+				_locationTextBox = null;
+			}
+
+			if (_submitButton != null) {
+				_submitButton.Dispose ();
+				_submitButton = null;
+			}
 		}
 	}
 }
