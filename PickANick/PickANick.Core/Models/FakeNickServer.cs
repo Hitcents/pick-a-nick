@@ -16,6 +16,7 @@ namespace PickANick.Core
             new Nick { Id = 4, ImageName = "Nick4" },
             new Nick { Id = 5, ImageName = "Nick5" },
         };
+
         private Location[] _locations = new[]
         {
             new Location { Id = 1, Name = "France", ImageName = "wootFrance" },
