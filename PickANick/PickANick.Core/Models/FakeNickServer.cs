@@ -14,7 +14,14 @@ namespace PickANick.Core
             new Nick { Id = 2, ImageName = "Angry Nic" },
             new Nick { Id = 3, ImageName = "Surprised Nic" },
             new Nick { Id = 4, ImageName = "Sad Nic" },
-            new Nick { Id = 5, ImageName = "Flirtatious Nic" },
+			new Nick { Id = 5, ImageName = "Flirtatious Nic" },
+			new Nick { Id = 6, ImageName = "Concerned Nic" },
+			new Nick { Id = 7, ImageName = "Sarcastic Nic" },
+			new Nick { Id = 8, ImageName = "Hysteric Nic" },
+			new Nick { Id = 9, ImageName = "Insane Nic" },
+			new Nick { Id = 10, ImageName = "Happy Nic" },
+			new Nick { Id = 11, ImageName = "Creepy Nic" },
+			new Nick { Id = 11, ImageName = "Youthful Nic" },
         };
         private Location[] _locations = new[]
         {

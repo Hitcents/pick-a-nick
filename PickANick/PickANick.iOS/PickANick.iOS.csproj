@@ -132,4 +132,8 @@
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\flirtatiousnic.png" />
+    <BundleResource Include="Resources\germany.png" />
+  </ItemGroup>
 </Project>
