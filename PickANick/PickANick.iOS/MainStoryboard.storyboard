@@ -133,7 +133,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="FgY-xV-SrC">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="FgY-xV-SrC">
                                 <rect key="frame" x="40" y="212" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>

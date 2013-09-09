@@ -26,6 +26,7 @@ namespace PickANick.iOS
 			await _nickViewModel.GetItem ();
 			_imageLocation.Image = UIImage.FromFile (_nickViewModel.Location.ImageName);
 			_imageNic.Image = UIImage.FromFile (_nickViewModel.PickedNick.ImageName);
+			_imageThing.Image = UIImage.FromFile (_nickViewModel.Item.ImageName);
 			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + _nickViewModel.Location.Name + " and brought back " + _nickViewModel.Item.Name +"!";
 		}
 	}

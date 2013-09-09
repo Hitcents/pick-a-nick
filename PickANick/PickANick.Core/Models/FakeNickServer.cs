@@ -36,6 +36,16 @@ namespace PickANick.Core
 			new Location { Id = 6, Name = "the Internet", ImageName = "theinternet.jpg" },
         };
 
+		private Item[] _items = new[]
+		{
+			new Item { Id = 1, Name = "a baseball", ImageName = "baseball.jpg" },
+			new Item { Id = 2, Name = "a sandwich", ImageName = "sandwich.png" },
+			new Item { Id = 3, Name = "sadness", ImageName = "sadness.jpg" },
+			new Item { Id = 4, Name = "only a lousy t-shirt", ImageName = "tshirt.png" },
+			new Item { Id = 5, Name = "a fatal exception", ImageName = "error.jpg" },
+			new Item { Id = 6, Name = "a newfound outlook on life", ImageName = "life.jpg" },
+		};
+
         public async Task<Nick[]> GetNicks()
         {
             await Task.Delay(2000);
@@ -46,18 +56,19 @@ namespace PickANick.Core
         public async Task<Location> GetLocation(string location)
         {
             await Task.Delay(2000);
-			string locationSearch = "";
+
+
 			char[] arr = location.ToArray ();
 			arr = Array.FindAll<char> (arr, (c => (char.IsLetter (c))));
-			locationSearch = new string(arr).ToLower();
-			return _locations.First(l => l.ImageName.ToLower().Contains(locationSearch));
+			var location2 = new string(arr).ToLower();
+            return _locations.First(l => l.ImageName.ToLower().Contains(location2));
         }
 
         public async Task<Item> GetItem(int nick, int location)
         {
             await Task.Delay(2000);
 
-            return new Item { Id = 1, Name = "a baseball", ImageName = "base" };
+            return _items[(new Random()).Next(0,(int)_items.Count())];
         }
     }
 }

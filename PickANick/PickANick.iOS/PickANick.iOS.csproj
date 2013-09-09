@@ -148,6 +148,12 @@
     <BundleResource Include="Resources\londonengland.jpg" />
     <BundleResource Include="Resources\newyorkamerica.jpg" />
     <BundleResource Include="Resources\theinternet.jpg" />
+    <BundleResource Include="Resources\baseball.jpg" />
+    <BundleResource Include="Resources\error.jpg" />
+    <BundleResource Include="Resources\life.jpg" />
+    <BundleResource Include="Resources\sadness.jpg" />
+    <BundleResource Include="Resources\sandwich.png" />
+    <BundleResource Include="Resources\tshirt.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PickANick.Core\PickANick.Core.csproj">
