@@ -10,25 +10,27 @@ namespace PickANick.Core
     {
         private Nick[] _nicks = new[]
         {
-            new Nick { Id = 1, ImageName = "Cool Nic" },
-            new Nick { Id = 2, ImageName = "Angry Nic" },
-            new Nick { Id = 3, ImageName = "Surprised Nic" },
-            new Nick { Id = 4, ImageName = "Sad Nic" },
-			new Nick { Id = 5, ImageName = "Flirtatious Nic" },
-			new Nick { Id = 6, ImageName = "Concerned Nic" },
-			new Nick { Id = 7, ImageName = "Sarcastic Nic" },
-			new Nick { Id = 8, ImageName = "Hysteric Nic" },
-			new Nick { Id = 9, ImageName = "Insane Nic" },
-			new Nick { Id = 10, ImageName = "Happy Nic" },
-			new Nick { Id = 11, ImageName = "Creepy Nic" },
-			new Nick { Id = 11, ImageName = "Youthful Nic" },
+			new Nick { Id = 1, ImageName = "coolnic.png" , Name = "Cool Nic" },
+			//new Nick { Id = 2, ImageName = "angrynic.png" , Name = "Angry Nic" },
+			//new Nick { Id = 3, ImageName = "surprisednic.png" , Name = "Surprised Nic" },
+			new Nick { Id = 2, ImageName = "sadnic.png" , Name = "Sad Nic" },
+			new Nick { Id = 3, ImageName = "flirtatiousnic.png" , Name = "Flirtatious Nic" },
+			//new Nick { Id = 6, ImageName = "concernednic.png" , Name = "Concerned Nic" },
+			new Nick { Id = 4, ImageName = "sarcasticnic.png" , Name = "Sarcastic Nic" },
+			//new Nick { Id = 8, ImageName = "hystericnic.png" , Name = "Hysteric Nic" },
+			new Nick { Id = 5, ImageName = "nicofthenight.png" , Name = "Nic of the Night" },
+			//new Nick { Id = 10, ImageName = "insanenic.png" , Name = "Insane Nic" },
+			new Nick { Id = 6, ImageName = "happynic.png" , Name = "Happy Nic" },
+			//new Nick { Id = 11, ImageName = "supernic.png" , Name = "SuperNic" },
+			new Nick { Id = 7, ImageName = "creepynic.png" , Name = "Creepy Nic" },
+			new Nick { Id = 8, ImageName = "youthfulnic.png" , Name = "Youthful Nic" },
         };
 
         private Location[] _locations = new[]
         {
-            new Location { Id = 1, Name = "France", ImageName = "wootFrance" },
-            new Location { Id = 2, Name = "Egypt", ImageName = "egypt1" },
-            new Location { Id = 3, Name = "Germany", ImageName = "germany222" },
+            new Location { Id = 1, Name = "France", ImageName = "wootFrance.jpg" },
+            new Location { Id = 2, Name = "Egypt", ImageName = "egypt1.jpg" },
+            new Location { Id = 3, Name = "Germany", ImageName = "germany222.png" },
         };
 
         public async Task<Nick[]> GetNicks()

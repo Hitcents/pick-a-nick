@@ -19,9 +19,14 @@ namespace PickANick.iOS
 		public async override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			_nickViewModel.LocationSearch = "germany";
-			await _nickViewModel.GetLocation();
-			_resultText.Text = _nickViewModel.PickedNick.ImageName + " went to " + _nickViewModel.Location.Name + " and brought back " + "<A THING>"+"!";
+			_restartButton.TouchUpInside += (sender, e) => {
+				NavigationController.PopToRootViewController(true);
+			};
+			await _nickViewModel.GetLocation ();
+			await _nickViewModel.GetItem ();
+			_imageLocation.Image = UIImage.FromFile (_nickViewModel.Location.ImageName);
+			_imageNic.Image = UIImage.FromFile (_nickViewModel.PickedNick.ImageName);
+			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + _nickViewModel.Location.Name + " and brought back " + _nickViewModel.Item.Name +"!";
 		}
 	}
 }

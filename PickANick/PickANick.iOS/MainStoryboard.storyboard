@@ -9,11 +9,11 @@
             <objects>
                 <viewController title="Pick-a-Nic!" id="2" customClass="MainController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SAa-B5-y02">
-                                <rect key="frame" x="0.0" y="49" width="320" height="411"/>
+                                <rect key="frame" x="0.0" y="49" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -68,7 +68,7 @@
             <objects>
                 <viewController id="4aX-Ac-aiB" customClass="LocationController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A5l-aG-R79">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="NW1-n6-7Gt">
@@ -95,9 +95,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="R0t-do-GYu" kind="push" id="4ig-SV-s8a"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -106,6 +103,7 @@
                     <connections>
                         <outlet property="_locationTextBox" destination="NW1-n6-7Gt" id="xpu-bQ-0YT"/>
                         <outlet property="_submitButton" destination="gPJ-7I-XWX" id="ifG-Z5-zCy"/>
+                        <segue destination="R0t-do-GYu" kind="push" identifier="ResultController" id="ySW-5p-KBa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbO-cp-EST" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,16 +115,16 @@
             <objects>
                 <viewController id="R0t-do-GYu" customClass="ResultController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rSk-wP-lQk">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="germany.png" id="UhD-qW-AIM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="UhD-qW-AIM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flirtatiousnic.png" id="uIR-Kq-yNU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="uIR-Kq-yNU">
                                 <rect key="frame" x="145" y="50" width="101" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Waiting for Nic..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pln-gx-HFe">
                                 <rect key="frame" x="8" y="114" width="304" height="128"/>
@@ -150,9 +148,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="2" kind="push" id="JjZ-Gm-3ok"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -171,10 +166,6 @@
             <point key="canvasLocation" x="1189" y="408"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="flirtatiousnic.png" width="482" height="482"/>
-        <image name="germany.png" width="400" height="300"/>
-    </resources>
     <classes>
         <class className="LocationController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationController.h"/>
@@ -205,7 +196,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="JjZ-Gm-3ok"/>
-    </inferredMetricsTieBreakers>
 </document>

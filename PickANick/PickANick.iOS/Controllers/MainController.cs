@@ -51,7 +51,7 @@ namespace PickANick.iOS
                 var nick = _nickViewModel.Nicks [indexPath.Row];
                 
 				var cell = tableView.DequeueReusableCell ("nickcell");
-				cell.TextLabel.Text = nick.ImageName;
+				cell.TextLabel.Text = nick.Name;
 				return cell;
             }
 

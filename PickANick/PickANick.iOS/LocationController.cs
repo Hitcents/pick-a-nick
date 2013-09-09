@@ -17,9 +17,13 @@ namespace PickANick.iOS
 
 		}
 
-		public async override void ViewDidLoad ()
+		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			_submitButton.TouchUpInside += (sender, e) => {
+				_nickViewModel.LocationSearch = _locationTextBox.Text;
+				PerformSegue ("ResultController", this);
+			};
 		}
 	}
 }
