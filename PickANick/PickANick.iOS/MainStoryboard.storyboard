@@ -123,7 +123,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="uIR-Kq-yNU">
-                                <rect key="frame" x="145" y="50" width="101" height="99"/>
+                                <rect key="frame" x="166" y="50" width="101" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Waiting for Nic..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pln-gx-HFe">
@@ -149,6 +149,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cGR-Wc-zbv">
+                                <rect key="frame" x="8" y="-14" width="156" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SlL-Ud-1EC">
+                                <rect key="frame" x="8" y="-16" width="156" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -159,6 +172,8 @@
                         <outlet property="_imageThing" destination="FgY-xV-SrC" id="iKh-dQ-mHd"/>
                         <outlet property="_restartButton" destination="TiQ-0F-ePy" id="Vvw-Mh-scY"/>
                         <outlet property="_resultText" destination="pln-gx-HFe" id="XNv-Fh-Wft"/>
+                        <outlet property="_textGreetings" destination="SlL-Ud-1EC" id="8g8-5X-VtG"/>
+                        <outlet property="_textGreetings2" destination="cGR-Wc-zbv" id="2JT-hI-wHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVB-1Y-xKt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,6 +203,8 @@
                 <relationship kind="outlet" name="_imageThing" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="_restartButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="_resultText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_textGreetings" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_textGreetings2" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

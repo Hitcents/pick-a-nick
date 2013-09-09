@@ -26,12 +26,18 @@ namespace PickANick.iOS
 
 		[Outlet]
 		MonoTouch.UIKit.UILabel _resultText { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel _textGreetings { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel _textGreetings2 { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (_imageThing != null) {
-				_imageThing.Dispose ();
-				_imageThing = null;
+			if (_imageLocation != null) {
+				_imageLocation.Dispose ();
+				_imageLocation = null;
 			}
 
 			if (_imageNic != null) {
@@ -39,9 +45,9 @@ namespace PickANick.iOS
 				_imageNic = null;
 			}
 
-			if (_imageLocation != null) {
-				_imageLocation.Dispose ();
-				_imageLocation = null;
+			if (_imageThing != null) {
+				_imageThing.Dispose ();
+				_imageThing = null;
 			}
 
 			if (_restartButton != null) {
@@ -52,6 +58,16 @@ namespace PickANick.iOS
 			if (_resultText != null) {
 				_resultText.Dispose ();
 				_resultText = null;
+			}
+
+			if (_textGreetings != null) {
+				_textGreetings.Dispose ();
+				_textGreetings = null;
+			}
+
+			if (_textGreetings2 != null) {
+				_textGreetings2.Dispose ();
+				_textGreetings2 = null;
 			}
 		}
 	}

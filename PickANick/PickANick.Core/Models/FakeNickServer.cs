@@ -34,6 +34,7 @@ namespace PickANick.Core
 			new Location { Id = 4, Name = "America", ImageName = "newyorkamerica.jpg" },
 			new Location { Id = 5, Name = "England", ImageName = "londonengland.jpg" },
 			new Location { Id = 6, Name = "the Internet", ImageName = "theinternet.jpg" },
+			new Location { Id = 7, Name = "Bowling Green", ImageName = "bowlinggreenky.jpg" },
         };
 
 		private Item[] _items = new[]
@@ -61,7 +62,24 @@ namespace PickANick.Core
 			char[] arr = location.ToArray ();
 			arr = Array.FindAll<char> (arr, (c => (char.IsLetter (c))));
 			var location2 = new string(arr).ToLower();
-            return _locations.First(l => l.ImageName.ToLower().Contains(location2));
+			Location result = null;
+			try
+			{
+            	result = _locations.First(l => l.ImageName.ToLower().Contains(location2));
+			}
+			catch(InvalidOperationException e)
+			{
+				Console.WriteLine (e);
+			}
+
+			if (result != null)
+			{
+				return result;
+			}
+			else
+			{
+				return _locations [(new Random ()).Next (0, _locations.Count ())];
+			}
         }
 
         public async Task<Item> GetItem(int nick, int location)
