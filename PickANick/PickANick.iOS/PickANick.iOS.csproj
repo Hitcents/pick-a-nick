@@ -135,9 +135,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\flirtatiousnic.png" />
-    <BundleResource Include="Resources\germany222.png" />
-    <BundleResource Include="Resources\egypt1.jpg" />
-    <BundleResource Include="Resources\wootFrance.jpg" />
     <BundleResource Include="Resources\coolnic.png" />
     <BundleResource Include="Resources\creepynic.png" />
     <BundleResource Include="Resources\happynic.png" />
@@ -145,6 +142,12 @@
     <BundleResource Include="Resources\sadnic.png" />
     <BundleResource Include="Resources\sarcasticnic.png" />
     <BundleResource Include="Resources\youthfulnic.png" />
+    <BundleResource Include="Resources\egypt.jpg" />
+    <BundleResource Include="Resources\germany.png" />
+    <BundleResource Include="Resources\parisfrance.jpg" />
+    <BundleResource Include="Resources\londonengland.jpg" />
+    <BundleResource Include="Resources\newyorkamerica.jpg" />
+    <BundleResource Include="Resources\theinternet.jpg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PickANick.Core\PickANick.Core.csproj">

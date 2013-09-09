@@ -28,9 +28,12 @@ namespace PickANick.Core
 
         private Location[] _locations = new[]
         {
-            new Location { Id = 1, Name = "France", ImageName = "wootFrance.jpg" },
-            new Location { Id = 2, Name = "Egypt", ImageName = "egypt1.jpg" },
-            new Location { Id = 3, Name = "Germany", ImageName = "germany222.png" },
+            new Location { Id = 1, Name = "France", ImageName = "parisfrance.jpg" },
+            new Location { Id = 2, Name = "Egypt", ImageName = "egypt.jpg" },
+			new Location { Id = 3, Name = "Germany", ImageName = "germany.png" },
+			new Location { Id = 4, Name = "America", ImageName = "newyorkamerica.jpg" },
+			new Location { Id = 5, Name = "England", ImageName = "londonengland.jpg" },
+			new Location { Id = 6, Name = "the Internet", ImageName = "theinternet.jpg" },
         };
 
         public async Task<Nick[]> GetNicks()
@@ -43,16 +46,18 @@ namespace PickANick.Core
         public async Task<Location> GetLocation(string location)
         {
             await Task.Delay(2000);
-
-            location = location.ToLower();
-            return _locations.First(l => l.Name.ToLower().Contains(location));
+			string locationSearch = "";
+			char[] arr = location.ToArray ();
+			arr = Array.FindAll<char> (arr, (c => (char.IsLetter (c))));
+			locationSearch = new string(arr).ToLower();
+			return _locations.First(l => l.ImageName.ToLower().Contains(locationSearch));
         }
 
         public async Task<Item> GetItem(int nick, int location)
         {
             await Task.Delay(2000);
 
-            return new Item { Id = 1, Name = "Baseball", ImageName = "base" };
+            return new Item { Id = 1, Name = "a baseball", ImageName = "base" };
         }
     }
 }
