@@ -23,8 +23,6 @@ namespace PickANick.iOS
 				NavigationController.PopToRootViewController(true);
 			};
 
-			string place = "";
-
 			try{
 			await _nickViewModel.GetLocation ();
 			await _nickViewModel.GetItem ();

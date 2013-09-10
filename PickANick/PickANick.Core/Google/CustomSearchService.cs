@@ -36,7 +36,7 @@ namespace PickANick.Core.Google
 			Console.WriteLine ("After get url");
 
             var response = JsonConvert.DeserializeObject<GoogleResponse>(json);
-            var result = response.Items[0];
+            var result = response.Items[new Random().Next(0,response.Items.Count())];
 
             return new Location
             {
