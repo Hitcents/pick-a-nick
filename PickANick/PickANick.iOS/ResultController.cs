@@ -22,14 +22,32 @@ namespace PickANick.iOS
 			_restartButton.TouchUpInside += (sender, e) => {
 				NavigationController.PopToRootViewController(true);
 			};
+
+			string place = "";
+
+			try{
 			await _nickViewModel.GetLocation ();
 			await _nickViewModel.GetItem ();
-			_imageLocation.Image = UIImage.FromFile (_nickViewModel.Location.ImageName);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine (e);
+			}
+			if (_nickViewModel.Location.Local)
+			{
+				_imageLocation.Image = UIImage.FromFile (_nickViewModel.Location.ImageName);
+				place = _nickViewModel.Location.Name;
+			}
+			else
+			{
+				_imageLocation.Image = UIImage.LoadFromData (NSData.FromUrl(new NSUrl(_nickViewModel.Location.ImageName)));
+				place = (_nickViewModel.LocationSearch);
+			}
 			_imageNic.Image = UIImage.FromFile (_nickViewModel.PickedNick.ImageName);
 			_imageThing.Image = UIImage.FromFile (_nickViewModel.Item.ImageName);
 			_textGreetings.Text = "Greetings from " + _nickViewModel.LocationSearch + "!";
 			_textGreetings2.Text = _textGreetings.Text;
-			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + _nickViewModel.Location.Name + " and brought back " + _nickViewModel.Item.Name +"!";
+			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + place + " and brought back " + _nickViewModel.Item.Name +"!";
 			_restartButton.TitleLabel.Lines = 2;
 
 			_saveButton.TouchUpInside += (sender, e) => {
@@ -42,8 +60,6 @@ namespace PickANick.iOS
 
 		public void ScreenCapture()
 		{
-			var documentsDirectory = Environment.GetFolderPath
-				(Environment.SpecialFolder.Personal);
 
 			Console.WriteLine("start capture of frame: " + new System.Drawing.SizeF(320,149));
 			UIGraphics.BeginImageContext(new System.Drawing.SizeF(320,149)); 
