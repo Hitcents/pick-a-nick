@@ -68,13 +68,25 @@
     <Compile Include="..\PickANick.Core\ViewModels\NickViewModel.cs">
       <Link>Core\ViewModels\NickViewModel.cs</Link>
     </Compile>
-    <Compile Include="Activity1.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="ResultActivity.cs" />
+    <Compile Include="LocationActivity.cs" />
+    <Compile Include="NickAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\Layout\NickRow.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\LocationLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\ResultLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\Main.axml" />
