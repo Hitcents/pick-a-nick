@@ -23,13 +23,17 @@ namespace PickANick.Core.Google
         public async Task<string> Search(string query)
         {
             var httpClient = new HttpClient();
-
-            return await httpClient.GetStringAsync("https://www.googleapis.com/customsearch/v1?q=" + query + "&searchType=image&key=" + Key + "&cx=" + CX);
+			string url = "https://www.googleapis.com/customsearch/v1?q=" + query + "&searchType=image&key=" + Key + "&cx=" + CX;
+			Console.WriteLine ("Before get url");
+			var result = httpClient.GetStringAsync(url).Result;
+			return result;
         }
 
         public override async Task<Location> GetLocation(string location)
         {
-            string json = await Search(location);
+			Console.WriteLine ("Before Search");
+			string json = await Search(location);
+			Console.WriteLine ("After get url");
 
             var response = JsonConvert.DeserializeObject<GoogleResponse>(json);
             var result = response.Items[0];

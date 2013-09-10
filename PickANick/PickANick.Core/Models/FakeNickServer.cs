@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PickANick.Core.Google;
 
 namespace PickANick.Core
 {
@@ -28,13 +29,13 @@ namespace PickANick.Core
 
         private Location[] _locations = new[]
         {
-            new Location { Id = 1, Name = "France", ImageName = "parisfrance.jpg" },
-            new Location { Id = 2, Name = "Egypt", ImageName = "egypt.jpg" },
-			new Location { Id = 3, Name = "Germany", ImageName = "germany.png" },
-			new Location { Id = 4, Name = "America", ImageName = "newyorkamerica.jpg" },
-			new Location { Id = 5, Name = "England", ImageName = "londonengland.jpg" },
-			new Location { Id = 6, Name = "the Internet", ImageName = "theinternet.jpg" },
-			new Location { Id = 7, Name = "Bowling Green", ImageName = "bowlinggreenky.jpg" },
+            new Location { Id = 1, Name = "France", ImageName = "parisfrance.jpg", Local = true },
+			new Location { Id = 2, Name = "Egypt", ImageName = "egypt.jpg", Local = true  },
+			new Location { Id = 3, Name = "Germany", ImageName = "germany.png", Local = true  },
+			new Location { Id = 4, Name = "America", ImageName = "newyorkamerica.jpg", Local = true  },
+			new Location { Id = 5, Name = "England", ImageName = "londonengland.jpg", Local = true  },
+			new Location { Id = 6, Name = "the Internet", ImageName = "theinternet.jpg", Local = true  },
+			new Location { Id = 7, Name = "Bowling Green", ImageName = "bowlinggreenky.jpg", Local = true  },
         };
 
 		private Item[] _items = new[]
@@ -78,7 +79,23 @@ namespace PickANick.Core
 			}
 			else
 			{
-				return _locations [(new Random ()).Next (0, _locations.Count ())];
+				CustomSearchService google = new CustomSearchService {
+					Key = "AIzaSyDLsMKnW4JfyHB_y5loy-NTiTi-sCLEQkc",
+					CX = "002750746776631512750:q6vczylwrbi"
+				};
+
+				var task = google.GetLocation (location);
+				task.Wait ();
+				if (task.Result != null)
+				{
+					result = task.Result;
+					result.Local = false;
+					return result;
+				}
+				else
+				{
+					return _locations [(new Random ()).Next (0, _locations.Count ())];
+				}
 			}
         }
 
