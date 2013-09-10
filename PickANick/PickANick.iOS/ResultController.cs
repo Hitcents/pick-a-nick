@@ -36,18 +36,17 @@ namespace PickANick.iOS
 			if (_nickViewModel.Location.Local)
 			{
 				_imageLocation.Image = UIImage.FromFile (_nickViewModel.Location.ImageName);
-				place = _nickViewModel.Location.Name;
 			}
 			else
 			{
 				_imageLocation.Image = UIImage.LoadFromData (NSData.FromUrl(new NSUrl(_nickViewModel.Location.ImageName)));
-				place = (_nickViewModel.LocationSearch);
 			}
 			_imageNic.Image = UIImage.FromFile (_nickViewModel.PickedNick.ImageName);
 			_imageThing.Image = UIImage.FromFile (_nickViewModel.Item.ImageName);
-			_textGreetings.Text = "Greetings from " + _nickViewModel.LocationSearch + "!";
-			_textGreetings2.Text = _textGreetings.Text;
-			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + place + " and brought back " + _nickViewModel.Item.Name +"!";
+			_nickViewModel.GetStrings ();
+			_textGreetings.Text = _nickViewModel.GreetingString;
+			_textGreetings2.Text = _nickViewModel.GreetingString;
+			_resultText.Text = _nickViewModel.ResultString;
 			_restartButton.TitleLabel.Lines = 2;
 
 			_saveButton.TouchUpInside += (sender, e) => {

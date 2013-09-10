@@ -56,6 +56,18 @@ namespace PickANick.Core.ViewModels
             private set;
         }
 
+		public string GreetingString
+		{
+			get;
+			private set;
+		}
+
+		public string ResultString
+		{
+			get;
+			private set;
+		}
+
         public async Task GetNicks()
         {
             IsBusy = true;
@@ -103,6 +115,29 @@ namespace PickANick.Core.ViewModels
             {
                 IsBusy = false;
             }
-        }
+		}
+
+		public void GetStrings()
+		{
+			if (PickedNick == null)
+				throw new Exception("No Nick picked!");
+			if (Location == null)
+				throw new Exception("No location!");
+			if (Item == null)
+				throw new Exception("No item!");
+
+			IsBusy = true;
+
+			GreetingString = "Greetings from " + LocationSearch + "!";
+			if (Location.Local)
+			{
+				ResultString = PickedNick.Name + " went to " + Location.Name + " and brought back " + Item.Name +"!";
+			}
+			else
+			{
+				ResultString = PickedNick.Name + " went to " + LocationSearch + " and brought back " + Item.Name +"!";
+			}
+			IsBusy = false;
+		}
     }
 }
