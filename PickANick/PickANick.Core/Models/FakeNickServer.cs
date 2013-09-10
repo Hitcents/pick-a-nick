@@ -54,7 +54,7 @@ namespace PickANick.Core
             return _nicks;
         }
 
-        public async Task<Location> GetLocation(string location)
+        public virtual async Task<Location> GetLocation(string location)
         {
             await Task.Delay(2000);
 
