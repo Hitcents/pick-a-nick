@@ -155,6 +155,7 @@
     <BundleResource Include="Resources\sandwich.png" />
     <BundleResource Include="Resources\tshirt.png" />
     <BundleResource Include="Resources\bowlinggreenky.jpg" />
+    <BundleResource Include="Resources\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PickANick.Core\PickANick.Core.csproj">

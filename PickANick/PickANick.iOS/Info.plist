@@ -16,6 +16,23 @@
 	<string>MainStoryboard</string>
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Pick-A-Nic</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>icon</string>
+	</array>
+	<key>UIPrerenderedIcon</key>
+	<true/>
+	<key>UIStatusBarTintParameters</key>
+	<dict>
+		<key>UINavigationBar</key>
+		<dict>
+			<key>Style</key>
+			<string>UIBarStyleDefault</string>
+			<key>Translucent</key>
+			<false/>
+		</dict>
+	</dict>
 </dict>
 </plist>
-

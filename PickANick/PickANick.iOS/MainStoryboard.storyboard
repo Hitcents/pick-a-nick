@@ -137,11 +137,27 @@
                                 <rect key="frame" x="40" y="212" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TiQ-0F-ePy">
-                                <rect key="frame" x="35" y="354" width="251" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="TiQ-0F-ePy">
+                                <rect key="frame" x="8" y="353" width="147" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Send Nic on another adventure!">
+                                            <attributes>
+                                                <color key="NSColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5nq-gP-q3K">
+                                <rect key="frame" x="168" y="353" width="144" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Send Nic on another adventure!">
+                                <state key="normal" title="Save to Photos!">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -172,6 +188,7 @@
                         <outlet property="_imageThing" destination="FgY-xV-SrC" id="iKh-dQ-mHd"/>
                         <outlet property="_restartButton" destination="TiQ-0F-ePy" id="Vvw-Mh-scY"/>
                         <outlet property="_resultText" destination="pln-gx-HFe" id="XNv-Fh-Wft"/>
+                        <outlet property="_saveButton" destination="5nq-gP-q3K" id="uw3-GA-0Zb"/>
                         <outlet property="_textGreetings" destination="SlL-Ud-1EC" id="8g8-5X-VtG"/>
                         <outlet property="_textGreetings2" destination="cGR-Wc-zbv" id="2JT-hI-wHh"/>
                     </connections>
@@ -203,6 +220,7 @@
                 <relationship kind="outlet" name="_imageThing" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="_restartButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="_resultText" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_saveButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="_textGreetings" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="_textGreetings2" candidateClass="UILabel"/>
             </relationships>

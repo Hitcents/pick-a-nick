@@ -30,6 +30,42 @@ namespace PickANick.iOS
 			_textGreetings.Text = "Greetings from " + _nickViewModel.LocationSearch + "!";
 			_textGreetings2.Text = _textGreetings.Text;
 			_resultText.Text = _nickViewModel.PickedNick.Name + " went to " + _nickViewModel.Location.Name + " and brought back " + _nickViewModel.Item.Name +"!";
+			_restartButton.TitleLabel.Lines = 2;
+
+			_saveButton.TouchUpInside += (sender, e) => {
+				ScreenCapture();
+				NavigationController.PopToRootViewController(true);
+			};
+
+
+		}
+
+		public void ScreenCapture()
+		{
+			var documentsDirectory = Environment.GetFolderPath
+				(Environment.SpecialFolder.Personal);
+
+			Console.WriteLine("start capture of frame: " + new System.Drawing.SizeF(320,149));
+			UIGraphics.BeginImageContext(new System.Drawing.SizeF(320,149)); 
+			var ctx = UIGraphics.GetCurrentContext();
+			if (ctx != null)
+			{
+				View.Layer.RenderInContext(ctx);
+				UIImage img = UIGraphics.GetImageFromCurrentImageContext();
+				UIGraphics.EndImageContext();
+
+				// Set to display in a UIImage control _on_ the view
+				//imageLogo.Image = img;
+
+				// Save to Photos
+				img.SaveToPhotosAlbum(
+					(sender, args)=>{Console.WriteLine("image saved to Photos");}
+				);
+			}
+			else
+			{
+				Console.WriteLine("ctx null - doesn't seem to happen");
+			}
 		}
 	}
 }

@@ -28,6 +28,9 @@ namespace PickANick.iOS
 		MonoTouch.UIKit.UILabel _resultText { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UIButton _saveButton { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel _textGreetings { get; set; }
 
 		[Outlet]
@@ -68,6 +71,11 @@ namespace PickANick.iOS
 			if (_textGreetings2 != null) {
 				_textGreetings2.Dispose ();
 				_textGreetings2 = null;
+			}
+
+			if (_saveButton != null) {
+				_saveButton.Dispose ();
+				_saveButton = null;
 			}
 		}
 	}
