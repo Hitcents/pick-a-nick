@@ -171,6 +171,7 @@
     <BundleResource Include="Resources\tshirt.png" />
     <BundleResource Include="Resources\bowlinggreenky.jpg" />
     <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\concernednic.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="json.net">

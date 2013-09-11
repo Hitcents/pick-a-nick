@@ -16,7 +16,6 @@ namespace PickANick.Core
 			//new Nick { Id = 3, ImageName = "surprisednic.png" , Name = "Surprised Nic" },
 			new Nick { Id = 2, ImageName = "sadnic.png" , Name = "Sad Nic" },
 			new Nick { Id = 3, ImageName = "flirtatiousnic.png" , Name = "Flirtatious Nic" },
-			//new Nick { Id = 6, ImageName = "concernednic.png" , Name = "Concerned Nic" },
 			new Nick { Id = 4, ImageName = "sarcasticnic.png" , Name = "Sarcastic Nic" },
 			//new Nick { Id = 8, ImageName = "hystericnic.png" , Name = "Hysteric Nic" },
 			new Nick { Id = 5, ImageName = "nicofthenight.png" , Name = "Nic of the Night" },
@@ -25,6 +24,7 @@ namespace PickANick.Core
 			//new Nick { Id = 11, ImageName = "supernic.png" , Name = "SuperNic" },
 			new Nick { Id = 7, ImageName = "creepynic.png" , Name = "Creepy Nic" },
 			new Nick { Id = 8, ImageName = "youthfulnic.png" , Name = "Youthful Nic" },
+			new Nick { Id = 9, ImageName = "concernednic.png" , Name = "Concerned Nic" },
         };
 
         private Location[] _locations = new[]
