@@ -41,12 +41,26 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\PickANick.Core\Google\CustomSearchService.cs">
+      <Link>Core\Google\CustomSearchService.cs</Link>
+    </Compile>
+    <Compile Include="..\PickANick.Core\Google\GoogleResponse.cs">
+      <Link>Core\Google\GoogleResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\PickANick.Core\Google\SearchResult.cs">
+      <Link>Core\Google\SearchResult.cs</Link>
+    </Compile>
     <Compile Include="..\PickANick.Core\Models\FakeNickServer.cs">
       <Link>Core\Models\FakeNickServer.cs</Link>
     </Compile>
@@ -76,6 +90,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\Fonts\Snell Roundhand Script.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\Layout\NickRow.axml">
@@ -95,10 +110,30 @@
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Drawable\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\baseball.jpg" />
+    <AndroidResource Include="Resources\Drawable\bowlinggreenky.jpg" />
+    <AndroidResource Include="Resources\Drawable\coolnic.png" />
+    <AndroidResource Include="Resources\Drawable\creepynic.png" />
+    <AndroidResource Include="Resources\Drawable\egypt.jpg" />
+    <AndroidResource Include="Resources\Drawable\error.jpg" />
+    <AndroidResource Include="Resources\Drawable\flirtatiousnic.png" />
+    <AndroidResource Include="Resources\Drawable\germany.png" />
+    <AndroidResource Include="Resources\Drawable\happynic.png" />
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+    <AndroidResource Include="Resources\Drawable\life.jpg" />
+    <AndroidResource Include="Resources\Drawable\londonengland.jpg" />
+    <AndroidResource Include="Resources\Drawable\newyorkamerica.jpg" />
+    <AndroidResource Include="Resources\Drawable\nicofthenight.png" />
+    <AndroidResource Include="Resources\Drawable\parisfrance.jpg" />
+    <AndroidResource Include="Resources\Drawable\sadness.jpg" />
+    <AndroidResource Include="Resources\Drawable\sadnic.png" />
+    <AndroidResource Include="Resources\Drawable\sandwich.png" />
+    <AndroidResource Include="Resources\Drawable\sarcasticnic.png" />
+    <AndroidResource Include="Resources\Drawable\theinternet.jpg" />
+    <AndroidResource Include="Resources\Drawable\tshirt.png" />
+    <AndroidResource Include="Resources\Drawable\youthfulnic.png" />
+    <AndroidResource Include="Resources\Values\Colors.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,10 +8,11 @@ using Android.Widget;
 using Android.OS;
 using PickANick.Core.ViewModels;
 using PickANick.Core;
+using Android.Content.PM;
 
 namespace PickANick.Droid
 {
-    [Activity(Label = "PickANick.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "PickANick.Droid", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
         private NickViewModel _nickViewModel;

@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+        <ImageView
+            android:src="@drawable/egypt"
+            android:id="@+id/greetingsImage"
+            android:scaleType="fitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <ImageView
+            android:src="@drawable/coolnic"
+            android:id="@+id/nickImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="100dp" />
+        <TextView
+            android:text="Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/greetingsText"
+            android:textSize="40dp" />
+    </RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -19,5 +46,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/resultText"
             android:gravity="center" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/itemImage" />
+        <Button
+            android:text="Send Nic on Another Adventure"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adventureButton" />
     </LinearLayout>
 </LinearLayout>
