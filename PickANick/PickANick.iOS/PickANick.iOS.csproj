@@ -125,14 +125,6 @@
     <Compile Include="..\PickANick.Core\ServiceContainer.cs">
       <Link>Core\ServiceContainer.cs</Link>
     </Compile>
-    <Compile Include="LocationController.cs" />
-    <Compile Include="LocationController.designer.cs">
-      <DependentUpon>LocationController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ResultController.cs" />
-    <Compile Include="ResultController.designer.cs">
-      <DependentUpon>ResultController.cs</DependentUpon>
-    </Compile>
     <Compile Include="..\PickANick.Core\Google\CustomSearchService.cs">
       <Link>Core\Google\CustomSearchService.cs</Link>
     </Compile>
@@ -141,6 +133,14 @@
     </Compile>
     <Compile Include="..\PickANick.Core\Google\SearchResult.cs">
       <Link>Core\Google\SearchResult.cs</Link>
+    </Compile>
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\LocationController.designer.cs">
+      <DependentUpon>LocationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ResultController.cs" />
+    <Compile Include="Controllers\ResultController.designer.cs">
+      <DependentUpon>ResultController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

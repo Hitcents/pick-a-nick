@@ -20,10 +20,21 @@ namespace PickANick.iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			_submitButton.TouchUpInside += (sender, e) => {
-				_nickViewModel.LocationSearch = _locationTextBox.Text;
-				PerformSegue ("ResultController", this);
+
+			_submitButton.TouchUpInside += (sender, e) => Submit();
+
+			_locationTextBox.ShouldReturn = textField =>
+			{
+				_locationTextBox.ResignFirstResponder();
+				Submit();
+				return false;
 			};
+		}
+
+		private void Submit()
+		{
+			_nickViewModel.LocationSearch = _locationTextBox.Text;
+			PerformSegue ("ResultController", this);
 		}
 	}
 }

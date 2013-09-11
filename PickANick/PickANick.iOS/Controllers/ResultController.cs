@@ -48,8 +48,8 @@ namespace PickANick.iOS
 			_restartButton.TitleLabel.Lines = 2;
 
 			_saveButton.TouchUpInside += (sender, e) => {
-				ScreenCapture();
-				NavigationController.PopToRootViewController(true);
+				ScreenCapture ();
+				new UIAlertView ("Congratulations!", "Your Nic is waiting for you in your photo album.", null, "Ok").Show ();
 			};
 
 

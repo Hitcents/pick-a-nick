@@ -85,8 +85,16 @@ namespace PickANick.Core
 				};
 
 				var task = google.GetLocation (location);
-				task.Wait ();
-				if (task.Result != null)
+				try
+				{
+					task.Wait ();
+				}
+				catch(Exception e)
+				{
+					Console.WriteLine (e);
+					return _locations [(new Random ()).Next (0, _locations.Count ())];
+				}
+				if (task.Result != null && !task.IsFaulted)
 				{
 					result = task.Result;
 					result.Local = false;
